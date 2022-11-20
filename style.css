@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+background-color:#34568B;
+
+}
+
+/* .popup{
+     display: none; 
+} */
+
+.popup{
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #FF6F61;
+    transform: translate(-15% , -30% , -30%);
+    padding: 20px ;
+    border-radius: 10px;
+    background-image: url('giphy.webp');
+    height: 220px;
+    box-shadow: 2rem 2rem 1rem rgba(0, 0, 0, 0.4);
+   color:wheat;
+}
+.choice{
+    font-weight: bolder;
+}
+
+.popup p {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.main {
+    padding-top: 10px;
+    font-size: 30px;
+}
+
+.btnX  {
+    margin-top: 4%;
+    padding: 10px;
+    font-size: 25px;
+    width: 30%;
+    border-radius: 15px;
+    background-color: #363945;
+    color:wheat
+}
+
+.buttons , .popup {
+    transition: all 1.2s ease-in-out;  
+}
+
+button:hover{
+    transform: scale(1.2);  
+    cursor: pointer;
+}
+
+.work{
+    text-align: center;
+    margin-top: 0%;
+    margin-left: 29%;
+    margin-right: 27%;
+    padding: 10px
+}
+.workPlayer{
+    background-color: pink;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 9vw;
+    align-items: center;
+    height:2.4vw;
+    padding: 2vw;
+    font-size: 1.7vw;
+    border-radius: 5vw;
+    cursor: pointer;
+    border: 3px solid antiquewhite;
+   
+}
+
+
+.game{
+    display: none;
+}
+
+.active{
+    margin: 1vw;
+    background-color:red;
+    border-radius: 5vw;
+    text-align: center;
+    padding: 0.5vw;
+    color: white;
+    height: 3.2vw;
+    width: 13vw;
+}
+
+.play {
+   margin-top: 0.6vw;
+}
+
+.aim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    display: grid;
+  place-content: center;
+  box-shadow:  5rem 5rem 5rem #01010166;
+}
+
+
+.put{
+    position:static;
+    list-style: none;
+    place-content: center;
+    font-size: 0;
+    margin: 0vw;
+    height: 5.1vw;
+    width: 5.5vw;
+    border: 1px solid whitesmoke;
+}
+
+.player{
+    width: 3vw;
+    place-content: center;
+    margin: 1vw;
+}
+
+.pawns{
+    width: 2.1vw;
+    place-content: center;
+    margin: 1vw;
+}
+
+.result{
+    text-align: center;
+    margin-top: 4%;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #FF6F61;
+    transform: translate(-15% , -30% , -30%);
+    padding: 3vw ;
+    border-radius: 1.5vw;
+    height: 16vw;   
+    transition: all 1.2s ease-in-out;
+    box-shadow: 0 3rem 4rem rgba(0, 0, 0, 0.5);
+}
+.ok{
+    background-image: url('imm.gif');
+}
+
+
+.result{
+    display: none;
+}
+.winner{
+    font-size: 2.5vw;
+    font-weight: bolder;
+    text-align: center;
+    margin-top: 11vw;
+    color: whitesmoke;
+}
+.winner{
+    display: none;
+}
+.result > button {
+    margin: 4.5%;
+    margin-top: 15%;
+    font-size: 2vw;
+    padding: 1.5vw;
+    border-radius: 2vw;
+    color: white;
+    background-color:#9B2335;
+}
+
+@media (max-width:650px){
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .put {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .player{
+        width: 7vw;
+    }
+    .popup{
+        margin: 10%;
+        margin-top: 25%;
+       width: 75vw;
+       height: 95vw;
+    }
+    
+    .popup p {
+        font-size: 7.5vw;
+    }
+    
+    .btnX  {
+        width: 40vw;
+        height: 20vw;
+        font-size: 7.5vw;
+       
+    }
+    
+    .choice{
+        font-size: 7.5vw;
+    }
+    .work{
+        margin-top: 20%;
+        padding: 10px
+    }    
+    
+.workPlayer{
+    height: 12vw;
+    width: 85vw;
+    margin-left: -62%;
+    padding: 2vw;
+    font-size: 5.5vw;
+}
+
+.active{
+    background-color:red;
+    height: 8vw;
+    width: 35vw;
+    font-size: 5vw;
+    padding: 1vw;
+}
+
+    .play{
+        margin-top: 15%;
+    }
+
+    .result{
+        margin: 10vw;
+         margin-left: 2.5vw;
+          margin-top: 9vw;
+          height: 50vw;   
+          width: 95vw;
+      }
+      
+      .winner{
+          font-size: 7.5vw;
+          margin-top: 40vw;
+          }
+      .result > button {
+          margin-top: 8%;
+          font-size: 5vw;
+          height: 20vw;
+          width: 36vw;
+          padding: 1.5vw;
+      }
+}
