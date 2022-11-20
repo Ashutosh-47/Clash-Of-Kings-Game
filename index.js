@@ -53,14 +53,14 @@ function PutPlayer() {
 
         if ( e.innerText === 'WP' || e.innerText === 'BP' ) {
 
-            e.innerHTML = `${e.innerText}<img class = 'player pawns' src = "${e.innerText}.png" alt = ""> `
+            e.innerHTML = `${e.innerText}<img class = 'player pawns' src = "./Images/${e.innerText}.png" alt = ""> `
             e.style.cursor = 'pointer'
         }
         else {
             
 //  console.log ( 'working' )
 
-            e.innerHTML = `${e.innerText}<img class = 'player' src = "${e.innerText}.png" alt = ""> `
+            e.innerHTML = `${e.innerText}<img class = 'player' src = "./Images/${e.innerText}.png" alt = ""> `
             e.style.cursor = 'pointer'
         }
     })
@@ -463,7 +463,7 @@ if ( CountKing == 1 ) {
         else if ( steps % 2 !== 0) {
             p.innerHTML = `<b><i>The winner is // BLACK // Player🎉🎉😎😎</i></b>`
         }
-    }, 100 ) 
+    }, 80 ) 
 
 }
 
