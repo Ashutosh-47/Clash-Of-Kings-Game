@@ -211,8 +211,7 @@ ul{
     .btnX  {
         width: 40vw;
         height: 20vw;
-        font-size: 7.5vw;
-       
+        font-size: 7.5vw; 
     }
     
     .choice{
@@ -224,7 +223,7 @@ ul{
     }    
     
 .workPlayer{
-    height: 12vw;
+    height: 15vw;
     width: 85vw;
     margin-left: -62%;
     padding: 2vw;
@@ -233,10 +232,10 @@ ul{
 
 .active{
     background-color:red;
-    height: 8vw;
+    height: 10vw;
     width: 35vw;
     font-size: 5vw;
-    padding: 1vw;
+    padding: 0.7vw;
 }
 
     .play{
