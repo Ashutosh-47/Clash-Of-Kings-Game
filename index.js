@@ -3,64 +3,39 @@ let   point   = new Audio("Aim.mp3") ;
 let   finish  = new Audio("GameOver.mp3") ;
 let   moves   = new Audio("Move.mp3") ;
 
+const first   = document.querySelector('.first')
 const popup   = document.querySelector('.popup') ;
 const put     = document.querySelectorAll('.put') ;
 const turnO   = document.querySelector('.turnO') ;
 const turnX   = document.querySelector('.turnX') ;
 const game    = document.querySelector('.game') ;
 const btnX    = document.querySelector('.btnX') ;
+
 const restart = document.querySelector('.btnR') ;
-const result  = document.querySelector('.result') ;
+
+const res  = document.querySelector('.result') ;
 
 const p = document.querySelector('.winner') ;
 
 
-const disapper = () => {
-  
-    point.play();
-  
-    popup.style.display = 'none' ;
-  
-    game.style.display = 'block' ;  
-}
 
+PutPlayer() ;
 
-btnX.addEventListener('click',(e) =>{
-      
-    disapper();
-
-    PutPlayer() ;
-
-    GiveColor();
-
-} )
-
-
-
-
-// document.querySelector('.turnX').addEventListener('click',()=>{
-//     turnO.classList.remove('active');
-//     turnX.classList.add('active');
-// })
-
+GiveColor();
 
 
 function PutPlayer() {
 
     Array.from( put ).map( ( e ) => {
         
-  //  console.log ( ' check working')
-
         if ( e.innerText === 'WP' || e.innerText === 'BP' ) {
 
-            e.innerHTML = `${e.innerText}<img class = 'player pawns' src = "./Images/${e.innerText}.png" alt = ""> `
+            e.innerHTML = `${e.innerText}<img class = 'player pawns' src = "/Images/${e.innerText}.png" alt = ""> `
             e.style.cursor = 'pointer'
         }
         else {
-            
-//  console.log ( 'working' )
-
-            e.innerHTML = `${e.innerText}<img class = 'player' src = "./Images/${e.innerText}.png" alt = ""> `
+        
+            e.innerHTML = `${e.innerText}<img class = 'player' src = "/Images/${e.innerText}.png" alt = ""> `
             e.style.cursor = 'pointer'
         }
     })
@@ -69,7 +44,6 @@ function PutPlayer() {
 
 function GiveColor() {
 
-    // console.log(' Check COLOR');
 
     Array.from( put ).map( ( e ) => {
         
@@ -99,7 +73,7 @@ let steps = 1 ;
 Array.from(  put ).map( (e) => {
 
     e.addEventListener('click' , () => {
-       
+      
         moves.play() ;
 
         //--------------------------------- Empty Path ------------------------------------
@@ -446,13 +420,9 @@ Array.from(  put ).map( find => {
 
 if ( CountKing == 1 ) {       
 
- 
-    setTimeout(() => {
-                
-        game.style.display = 'none' ;
-        result.style.display = 'block';
-        result.classList.add('ok');
-        p.style.display = 'block';
+      game.style.display = 'none' ;
+        res.style.display = 'block';
+      
         
         finish.play() ;
 
@@ -463,7 +433,7 @@ if ( CountKing == 1 ) {
         else if ( steps % 2 !== 0) {
             p.innerHTML = `<b><i>The winner is // BLACK // Player🎉🎉😎😎</i></b>`
         }
-    }, 80 ) 
+    
 
 }
 
@@ -480,8 +450,7 @@ Array.from( put ).map( ( InitialPosition ) => {
             
         if ( InitialPosition.style.backgroundColor == 'lightblue' ) {
             
-            // console.log(InitialPosition.innerText)
-
+        
             CurrId = InitialPosition.id ;
 
             CurrText = InitialPosition.innerText ;
@@ -492,12 +461,10 @@ Array.from( put ).map( ( InitialPosition ) => {
                     
                     if ( FinalPosition.style.backgroundColor == 'yellowgreen' && FinalPosition.innerText.length == 0 ) {
                         
-                        // console.log(FinalPosition.innerText)
-            
+                        
                         document.getElementById(CurrId).innerText = '' ;
                         FinalPosition.innerText = CurrText ;
                         
-                        // console.log('Part 2 ' , FinalPosition.innerText , 'inin ', InitialPosition.innerText)
                         
                         GiveColor() ;
                         PutPlayer() ;
@@ -528,7 +495,7 @@ function SameTeam() {
 
                 if ( x2.style.backgroundColor == 'yellowgreen' && x2.innerText.length !== 0 ) {
 
-                    //  console.log ( 'curr ' , curr1 , curr2)
+                 
 
                     if (  ( Number( x2.id ) % 2 == 0 ) && curr2 == curr1 ) {  x2.style.backgroundColor = 'white' }
 
@@ -554,10 +521,3 @@ Array.from( put ).map( ( onePlayer ) => {
 }) ; 
 
 
-// ---------------- Restart Game --------------------
-restart.addEventListener('click' , () => {
-    point.play();
-    setTimeout(()=> {
-        window.location.reload(); 
-    },100)
-})
