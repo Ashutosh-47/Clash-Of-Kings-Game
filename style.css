@@ -6,8 +6,10 @@
 
 body{
 background-color:#34568B;
+background-image: url('put1.webp');
+background-size: cover;
+background-repeat: no-repeat;
 /* #FF6F61 */
-
 }
 .first{
     height:  100vh ;
